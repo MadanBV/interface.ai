@@ -1,0 +1,8 @@
+{"ts":"2026-08-13T19:54:47.435Z","runId":"replay-not-found-demo","event":"step_started","stepId":"open","action":"navigate"}
+{"ts":"2026-08-13T19:54:47.477Z","runId":"replay-not-found-demo","event":"step_completed","stepId":"open"}
+{"ts":"2026-08-13T19:54:47.478Z","runId":"replay-not-found-demo","event":"step_started","stepId":"enter-member","action":"fill"}
+{"ts":"2026-08-13T19:54:47.480Z","runId":"replay-not-found-demo","event":"locator_resolved","stepId":"enter-member","locator":{"role":"textbox","name":"Member number"}}
+{"ts":"2026-08-13T19:54:47.488Z","runId":"replay-not-found-demo","event":"step_completed","stepId":"enter-member"}
+{"ts":"2026-08-13T19:54:47.488Z","runId":"replay-not-found-demo","event":"step_started","stepId":"search","action":"click"}
+{"ts":"2026-08-13T19:54:47.490Z","runId":"replay-not-found-demo","event":"locator_resolved","stepId":"search","locator":{"role":"button","name":"Find Member"}}
+{"ts":"2026-08-13T19:54:48.070Z","runId":"replay-not-found-demo","event":"business_outcome","code":"MEMBER_NOT_FOUND","stepId":"search"}

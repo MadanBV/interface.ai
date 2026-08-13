@@ -1,0 +1,12 @@
+{"ts":"2026-08-13T19:54:46.494Z","runId":"replay-success-demo","event":"step_started","stepId":"open","action":"navigate"}
+{"ts":"2026-08-13T19:54:46.537Z","runId":"replay-success-demo","event":"step_completed","stepId":"open"}
+{"ts":"2026-08-13T19:54:46.537Z","runId":"replay-success-demo","event":"step_started","stepId":"enter-member","action":"fill"}
+{"ts":"2026-08-13T19:54:46.539Z","runId":"replay-success-demo","event":"locator_resolved","stepId":"enter-member","locator":{"role":"textbox","name":"Member number"}}
+{"ts":"2026-08-13T19:54:46.547Z","runId":"replay-success-demo","event":"step_completed","stepId":"enter-member"}
+{"ts":"2026-08-13T19:54:46.547Z","runId":"replay-success-demo","event":"step_started","stepId":"search","action":"click"}
+{"ts":"2026-08-13T19:54:46.549Z","runId":"replay-success-demo","event":"locator_resolved","stepId":"search","locator":{"role":"button","name":"Find Member"}}
+{"ts":"2026-08-13T19:54:47.136Z","runId":"replay-success-demo","event":"step_completed","stepId":"search"}
+{"ts":"2026-08-13T19:54:47.137Z","runId":"replay-success-demo","event":"step_started","stepId":"read-balance","action":"extract"}
+{"ts":"2026-08-13T19:54:47.142Z","runId":"replay-success-demo","event":"locator_resolved","stepId":"read-balance","locator":{"css":"[data-field=\"savings-balance\"]"}}
+{"ts":"2026-08-13T19:54:47.145Z","runId":"replay-success-demo","event":"step_completed","stepId":"read-balance"}
+{"ts":"2026-08-13T19:54:47.148Z","runId":"replay-success-demo","event":"run_completed","outputs":{"balance":"$4,812.37"},"recoveredConditions":0}

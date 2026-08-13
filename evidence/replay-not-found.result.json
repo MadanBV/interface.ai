@@ -1,0 +1,8 @@
+{
+  "status": "business_outcome",
+  "outcome": {
+    "code": "MEMBER_NOT_FOUND",
+    "observed": "MEMBER_NOT_FOUND: No member matches that number."
+  },
+  "outputs": {}
+}

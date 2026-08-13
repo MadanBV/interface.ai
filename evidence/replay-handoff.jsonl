@@ -1,0 +1,4 @@
+{"ts":"2026-08-13T19:54:48.349Z","runId":"replay-handoff-demo","event":"step_started","stepId":"open","action":"navigate"}
+{"ts":"2026-08-13T19:54:48.392Z","runId":"replay-handoff-demo","event":"step_completed","stepId":"open"}
+{"ts":"2026-08-13T19:54:48.392Z","runId":"replay-handoff-demo","event":"step_started","stepId":"enter-member","action":"fill"}
+{"ts":"2026-08-13T19:54:48.431Z","runId":"replay-handoff-demo","event":"step_failed","code":"STEP_FAILED","stepId":"enter-member","expected":{"primary":{"role":"textbox","name":"Missing legacy control"}},"observed":"No unique locator matched: [{\"role\":\"textbox\",\"name\":\"Missing legacy control\"}]","screenshot":"evidence\\failure-enter-member.png"}

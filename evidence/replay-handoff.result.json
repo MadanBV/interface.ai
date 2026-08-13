@@ -1,0 +1,42 @@
+{
+  "status": "failure",
+  "error": {
+    "code": "STEP_FAILED",
+    "stepId": "enter-member",
+    "expected": {
+      "primary": {
+        "role": "textbox",
+        "name": "Missing legacy control"
+      }
+    },
+    "observed": "No unique locator matched: [{\"role\":\"textbox\",\"name\":\"Missing legacy control\"}]",
+    "screenshot": "evidence\\failure-enter-member.png"
+  },
+  "handoff": [
+    {
+      "event": "control_transferred",
+      "to": "human",
+      "context": {
+        "code": "STEP_FAILED",
+        "stepId": "enter-member",
+        "expected": {
+          "primary": {
+            "role": "textbox",
+            "name": "Missing legacy control"
+          }
+        },
+        "observed": "No unique locator matched: [{\"role\":\"textbox\",\"name\":\"Missing legacy control\"}]",
+        "screenshot": "evidence\\failure-enter-member.png"
+      }
+    },
+    {
+      "event": "human_action",
+      "description": "acknowledged simulated operator review"
+    },
+    {
+      "event": "control_transferred",
+      "to": "automation",
+      "operator": "demo-operator"
+    }
+  ]
+}

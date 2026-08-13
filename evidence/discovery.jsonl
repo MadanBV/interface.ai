@@ -1,0 +1,5 @@
+{"ts":"2026-08-13T19:54:46.141Z","runId":"discovery-demo","event":"model_decision","step":0,"thought":"Open the permitted member inquiry.","action":"navigate"}
+{"ts":"2026-08-13T19:54:46.171Z","runId":"discovery-demo","event":"model_decision","step":1,"thought":"The member number field is visible; parameterize it.","action":"fill"}
+{"ts":"2026-08-13T19:54:46.185Z","runId":"discovery-demo","event":"model_decision","step":2,"thought":"Submit the inquiry.","action":"click"}
+{"ts":"2026-08-13T19:54:46.263Z","runId":"discovery-demo","event":"model_decision","step":3,"thought":"The record is loaded and exposes the requested balance.","action":"finish"}
+{"ts":"2026-08-13T19:54:46.264Z","runId":"discovery-demo","event":"artifact_emitted","artifactId":"meridian.member-savings.lookup.v1"}

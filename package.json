@@ -1,0 +1,17 @@
+{
+  "name": "legacy-ui-capabilities",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "type": "module",
+  "description": "LLM discovery to deterministic computer-use capabilities",
+  "scripts": {
+    "app": "node src/cli.js app",
+    "discover": "node src/cli.js discover",
+    "replay": "node src/cli.js replay",
+    "demo": "node src/demo.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": { "playwright": "^1.54.0" }
+}

@@ -1,0 +1,7 @@
+import test from 'node:test'; import assert from 'node:assert/strict';
+import { redact } from '../src/redact.js'; import { Policy, PolicyViolation, localPolicy } from '../src/policy.js'; import { bind, validateArtifact } from '../src/schema.js'; import { balanceArtifact } from '../src/artifact.js'; import { HandoffController } from '../src/handoff.js';
+
+test('artifact validates and binds inputs', () => { assert.equal(validateArtifact(balanceArtifact()).schemaVersion, '1.0'); assert.equal(bind('id={{input.memberId}}', { memberId: '12345' }), 'id=12345'); });
+test('policy rejects untrusted origins and irreversible actions', () => { const p = new Policy(localPolicy); assert.throws(() => p.checkNavigation('https://evil.example/'), PolicyViolation); assert.throws(() => p.checkAction({ type: 'click', risk: 'irreversible' }), /approval/); });
+test('redactor removes regulated values recursively', () => { const value = redact({ ssn: '111-22-3333', note: 'Bearer abc.def', nested: { token: 'x' } }); assert.deepEqual(value, { ssn: '[REDACTED]', note: 'Bearer [REDACTED]', nested: { token: '[REDACTED]' } }); });
+test('handoff transfers and returns ownership with audit history', async () => { const h = new HandoffController({ autoResume: true }); await h.request({ reason: 'test' }); assert.equal(h.owner, 'automation'); assert.deepEqual(h.history.map(x => x.event), ['control_transferred', 'human_action', 'control_transferred']); });

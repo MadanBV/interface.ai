@@ -1,0 +1,6 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import fs from 'node:fs'; import os from 'node:os'; import path from 'node:path';
+import { startApp } from '../src/app.js'; import { openRuntime } from '../src/runtime.js'; import { replay } from '../src/replay.js'; import { balanceArtifact } from '../src/artifact.js'; import { RunLogger } from '../src/logger.js'; import { HandoffController } from '../src/handoff.js';
+
+test('deterministic replay separates success and business outcome', async () => { const port = 4289; const server = await startApp(port); const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'capability-')); const artifact = balanceArtifact(`http://127.0.0.1:${port}`);
+  try { for (const [memberId, expected] of [['12345', 'success'], ['99999', 'business_outcome']]) { const r = await openRuntime(); r.policy.config.origins = [`http://127.0.0.1:${port}`]; try { const out = await replay({ artifact, inputs: { memberId }, ...r, logger: new RunLogger(path.join(dir, `${memberId}.jsonl`), memberId), handoff: new HandoffController({ autoResume: true }), evidenceDir: dir }); assert.equal(out.status, expected); } finally { await r.browser.close(); } } } finally { server.close(); }
+});
